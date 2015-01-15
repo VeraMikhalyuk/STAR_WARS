@@ -1,0 +1,158 @@
+﻿<html>
+<head>
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="cleartype" content="on"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="address=no"/>
+
+    <!-- Blackberry and etc. -->
+    <meta http-equiv="cleartype" content="on"/>
+    <meta name="HandheldFriendly" content="True"/>
+
+    <!-- iPhone -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <link rel="apple-touch-startup-image" href="images/startup.png">
+    <link rel="apple-touch-icon" href="images/custom_icon.jpg"/>
+    <link rel="apple-touch-icon" href="images/touch-icon-iphone.jpg"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="images/touch-icon-ipad.jpg"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="images/touch-icon-iphone4.jpg"/>
+
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <!--[if IE]>
+    <meta http-equiv="imagetoolbar" content="no"/>
+    <![endif]-->
+
+    <!-- Android and etc. -->
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="address=no"/>
+
+    <!-- SEO -->
+    <title>Checkers</title>
+    <meta name="description" content="We all know this game - classic checkers. The game has a simple and intuitive interface. Excellent graphics. This game is not for those who give up without a fight, but for the hard-nosed and persistent people."/>
+    <meta name="keywords" content="checkers, game, js, javascript, html, anroid, chrome, opera, online, no money, free, html5, download, play, best, simpl, on phone, on mobile, exe, apk, file"/>
+    <meta name="author" content="http://Tizen-Apps.ru"/>
+
+    <link href="./images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+
+    <link href="css/default.css" rel="stylesheet"/>
+    <link rel='stylesheet' media='screen and (min-width: 800px)' href='css/resize/1024.css'/>
+    <link rel='stylesheet' media='screen and (min-width: 600px) and (max-width: 799px)' href='css/resize/800.css'/>
+    <link rel='stylesheet' media='screen and (min-width: 480px) and (max-width: 599px)' href='css/resize/600.css'/>
+    <link rel='stylesheet' media='screen and (min-width: 320px) and (max-width: 479px)' href='css/resize/480.css'/>
+    <link rel='stylesheet' media='screen and (min-width: 240px) and (max-width: 319px)' href='css/resize/320.css'/>
+    <link rel='stylesheet' media='screen and (max-width: 239px)' href='css/resize/240.css'/>
+
+    <script src="js/utils.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/module/message.js"></script>
+    <link href="js/module/message.css" rel="stylesheet"/>
+<script type="text/javascript">
+  function startTimer() {
+    var my_timer = document.getElementById("my_timer");
+    var time = my_timer.innerHTML;
+    var arr = time.split(":");
+    var h = arr[0];
+    var m = arr[1];
+    var s = arr[2];
+	if(s == 59)
+	{
+		s = "00";
+		if(m == 59)
+		{
+			m = "0";
+			if(h == 23)
+			{
+				h = "00";
+			}else{
+				h++;
+				if (h < 10) h = "0" + h;
+			}
+		}else{
+			m++;
+			if (m < 10) m = "0" + m;
+		}
+	}else{
+		s++;
+		if (s < 10) s = "0" + s;
+	}
+    document.getElementById("my_timer").innerHTML = h+":"+m+":"+s;
+    setTimeout(startTimer, 1000);
+  }
+  window.onload = function(){
+	startTimer();
+  }
+</script>
+	</head>
+
+
+
+
+
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Два разных текста на одной строке</title>
+  <style>
+   table.text  {
+    width:  100%; /* Ширина таблицы */
+    border-spacing: 0; /* Расстояние между ячейками */
+   }
+   table.text td {
+    width: 50%; /* Ширина ячеек */
+    vertical-align: top; /* Выравнивание по верхнему краю */
+   }
+   td.rightcol { /* Правая ячейка */ 
+    text-align: right; /* Выравнивание по правому краю */
+   }
+</style>
+ </head>
+ <body>
+  <table class="text">
+   <tr>
+    <td>
+<audio controls>
+ <source src="mu/ЗВ.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
+</td>
+<td class="rightcol">
+
+<body onload="load()" onresize="resizeBoard()">
+<div align="right"><span id="my_timer" style="color:white;font-size: 150%; font-weight: bold;">Время игры:00:00:00</span> </div>
+</td>
+   </tr>
+  </table>
+ </body>
+</html>
+
+
+
+
+<table cellspacing="0" cellpadding="0" class="board_containter_table">
+   
+
+ <tr>
+<td><a href="index.html"> <img src="images/меню.jpg" align="top" style="width:100px"> </a></td>
+<td class="board_containter_td" id="board_containter"></td>
+</tr>
+
+
+</table>
+<table cellspacing="0" cellpadding="0" class="message hidden" id="message">
+    <tr>
+        <td>
+            <div class="message_container" id="message_container">
+                <div class="message_close" id="message_close">x</div>
+                <div class="message_info" id="message_info"></div>
+            </div>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
