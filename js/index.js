@@ -257,7 +257,7 @@ function swap(from, to) {
 	board[from.x][from.y] = board[to.x][to.y];
 	board[to.x][to.y] = dummy_num;
 }
-function remove(x, y) {
+function remove(x, y) {(!)
 	if(my_turn || comp_move)
 	{
 		if(my_turn)
