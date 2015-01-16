@@ -209,7 +209,7 @@ function legal_move(from, to) {
 
 	return true;
 }
-function move(from, to) {
+function move(from, to) {(!)
 	my_turn = true;
 	if(legal_move(from, to)) {
 		piece = board[from.x][from.y];
