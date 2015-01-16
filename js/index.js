@@ -102,7 +102,7 @@ function renderBoard() {
 	insertAfter(elem, document.getElementById("board_containter"));
 	//document.getElementById("board_containter").innerHTML+="<td><a>Игрок</a> <br/> <a>Компьютер</a></td>";
 }
-function generateImage(i, j) {
+function generateImage(i, j) {(!)
 	var imageSrc = "";
 	var imageName = "space" + i + "" + j;
 	if(board[i][j] == 1) imageSrc = "checkers/"+localStorage.getItem("light");
